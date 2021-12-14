@@ -1,0 +1,107 @@
+@import '../../styles/variables';
+
+.sidebar-wrap {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 288px;
+  height: 100vh;
+  background-color: white;
+  border-right: 1px solid #DEEBFE;
+  box-shadow: 0px 4px 30px rgba(46, 113, 255, 0.06);
+  padding: 2rem 1.5rem;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 124px);
+  margin-top: 32px;
+  border-top: 1px solid #DEEBFE;
+  padding-top: 32px;
+}
+
+.main-links-wrap {
+  position: relative;
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 10px;
+  &:hover {
+    background-color: rgba(46, 113, 255, 0.07);
+  }
+}
+
+.main-links-drop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-link--header {
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 24px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
+
+.sub-link-wrap {
+  margin-left: 8px;
+  border-left: 1px solid $border-color;
+  margin-top: 24px;
+  padding-left: 16px;
+  position: absolute;
+}
+
+.sub-link-item {
+  display: inline-block;
+  padding: 14px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: $sec-text-color;
+  font-size: 0.875rem;
+  font-weight: 600;
+  width: 100%;
+  &:nth-child(n+2) {
+    margin-top: 12px;
+  }
+  &:hover {
+    background-color: $link-bg-color;
+    color: $primary-btn-bg-color;
+  }
+}
+
+.start-btn {
+  font-size: 1rem !important;
+  box-shadow: 0px 2px 21px rgba(46, 113, 255, 0.41) !important;
+  border-radius: 48px !important;
+  padding: 16px 0;
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.start-btn-wrap {
+  padding: 0 8px;
+  position: relative;
+}
+
+.start-num {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 50%;
+  background-color: #FF1B44;
+  position: absolute;
+  top: -6px;
+  right: 5px;
+}

@@ -1,0 +1,118 @@
+@import '../../styles/variables';
+
+.start-guide-wrap {
+  background-color: white;
+  position: absolute;
+  top: -560px;
+  width: 466px;
+  box-shadow: 0px 5px 83px rgba(2, 11, 30, 0.14);
+  border-radius: 30px;
+}
+
+.start-status {
+  background-color: $text-color;
+  padding: 32px 24px;
+  border-radius: 30px 30px 0 0;
+}
+
+.start-status__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header--details--heading {
+  font-size: 1.125rem;
+  color: white;
+  font-weight: 700;
+}
+
+.header--details--text {
+  color: #E2EAF4;
+  font-size: 0.875rem;
+  span {
+    color: $primary-btn-bg-color;
+    margin-right: 8px;
+    margin-top: 8px;
+    display: inline-block;
+  }
+}
+
+.close-start {
+  cursor: pointer;
+}
+
+.status-description {
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  .description--text {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-left: 14px;
+  }
+}
+
+.line-break-outer {
+  background-color: rgba(126, 152, 206, 0.32);
+  height: 6px;
+  .line-break-inner {
+    background-color: $success-color;
+    height: 6px;
+    width: 25%;
+  }
+}
+
+.start-items-wrap {
+  padding: 24px 20px;
+  border-radius: 0 0 30px 30px;
+  background-color: white;
+}
+
+.start-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 14px 12px;
+  &:hover {
+    background: rgba(46, 113, 255, 0.07);
+    svg {
+      color: white;
+    }
+    .item--heading {
+      color: $primary-btn-bg-color;
+    }
+  }
+}
+
+.start-item-details {
+  .item--heading {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .item-description {
+    color: $sec-text-color;
+    margin-top: 8px;
+    font-size: 0.875rem;
+  }
+}
+
+.done {
+  cursor: not-allowed;
+  &:hover {
+    .item--heading {
+      color: $success-color;
+    }
+  }
+  .item--heading {
+    color: $success-color;
+    text-decoration: line-through;
+    text-decoration-color: $success-color;
+  }
+}

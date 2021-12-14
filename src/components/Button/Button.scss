@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.primary-btn {
+  @include primaryButton;
+}
+
+.secondary-btn {
+  @include secondaryButton;
+}
