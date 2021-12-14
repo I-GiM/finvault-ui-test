@@ -1,0 +1,166 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.main-view-wrap {
+  margin-left: 289px;
+  padding: 48px;
+  min-height: 100vh;
+  .heading {
+    color: $sec-text-color;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .heading-title {
+    margin-top: 4px;
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+}
+
+.dashboard-wrap {
+  margin-top: 32px;
+  padding: 32px 0;
+  border-top: 1px solid $border-color;
+}
+
+.currency-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.currency-item {
+  padding: 32px;
+  background: #FFFFFF;
+  border: 1px solid $border-color;
+  box-shadow: 0px 4px 26px rgba(20, 60, 95, 0.04);
+  border-radius: 20px;
+}
+
+.currency-details {
+  display: flex;
+}
+
+.currency-details--currency {
+  min-width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background-color: $success-bg-color;
+  color: $success-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currency-details--amount-wrap {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .currency-details--currency-name {
+    color: $sec-text-color;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .currency-details--amount {
+    font-size: 1.5rem;
+    font-weight: 700; 
+  }
+}
+
+.currency-btn-wrap {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 80px 80px;
+  column-gap: 10px;
+  .send-btn,
+  .convert-btn {
+    height: 32px;
+  }
+}
+
+.transactions-wrap {
+  margin-top: 32px;
+}
+
+.transaction-header {
+  background-color: $link-bg-color;
+  padding: 14px 32px;
+  border-radius: 20px 20px 0 0;
+  border: 1px solid $border-color;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 56px;
+}
+
+.transaction-header--heading {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  color: $sec-text-color;
+}
+
+.sort-btn-wrap {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  .sort-btn-asc,
+  .sort-btn-dsc {
+    height: 8px;
+    background-color: transparent;
+    border: none;
+    transform: scale(1.2);
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+      transition: all 0.5s;
+      transform: scale(2);
+    }
+  }
+}
+
+.loading {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.transaction-item {
+  background-color: white;
+  padding: 14px 32px;
+  border-bottom: 1px solid $border-color;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 56px;
+
+  .transaction--from,
+  .transaction--to,
+  .transaction--currency,
+  .transaction--amount {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .transaction--recieved {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    width: fit-content;
+    border-radius: 106px;
+    font-weight: 600;
+    background-color: $success-bg-color;
+    color: $success-color;
+  }
+  .transaction--sent {
+    display: inline-block;
+    padding: 6px 12px;
+    width: fit-content;
+    border-radius: 106px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: $error-bg-color;
+    color: $error-color;
+  }
+}
