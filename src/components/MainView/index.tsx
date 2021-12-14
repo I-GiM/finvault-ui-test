@@ -35,7 +35,11 @@ const MainView = () => {
     setTimeout(() => {
       setLoading(false)
       setAllTransactions(transactions)
-    }, 1500);
+    }, 1000);
+  }, [])
+
+  useEffect(() => {
+    setLoading(false)
   }, [loading])
 
   const sortByAscDsc = (par: string, sortBy: any) => {
